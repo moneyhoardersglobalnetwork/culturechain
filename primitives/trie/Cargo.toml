@@ -29,7 +29,7 @@ parking_lot = { version = "0.12.1", optional = true }
 scale-info = { version = "2.5.0", default-features = false, features = ["derive"] }
 thiserror = { version = "1.0.30", optional = true }
 tracing = { version = "0.1.29", optional = true }
-trie-db = { version = "0.27.0", default-features = false }
+trie-db = { version = "0.28.0", default-features = false }
 trie-root = { version = "0.18.0", default-features = false }
 sp-core = { version = "21.0.0", default-features = false, path = "../core" }
 sp-std = { version = "8.0.0", default-features = false, path = "../std" }
