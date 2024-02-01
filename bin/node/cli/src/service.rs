@@ -25,7 +25,7 @@ use codec::Encode;
 use frame_benchmarking_cli::SUBSTRATE_REFERENCE_HARDWARE;
 use frame_system_rpc_runtime_api::AccountNonceApi;
 use futures::prelude::*;
-use kitchensink_runtime::RuntimeApi;
+use culturechain_runtime::RuntimeApi;
 use node_executor::ExecutorDispatch;
 use node_primitives::Block;
 use sc_client_api::{Backend, BlockBackend};
@@ -78,43 +78,43 @@ pub fn fetch_nonce(client: &FullClient, account: sp_core::sr25519::Pair) -> u32 
 pub fn create_extrinsic(
 	client: &FullClient,
 	sender: sp_core::sr25519::Pair,
-	function: impl Into<kitchensink_runtime::RuntimeCall>,
+	function: impl Into<culturechain_runtime::RuntimeCall>,
 	nonce: Option<u32>,
-) -> kitchensink_runtime::UncheckedExtrinsic {
+) -> culturechain_runtime::UncheckedExtrinsic {
 	let function = function.into();
 	let genesis_hash = client.block_hash(0).ok().flatten().expect("Genesis block exists; qed");
 	let best_hash = client.chain_info().best_hash;
 	let best_block = client.chain_info().best_number;
 	let nonce = nonce.unwrap_or_else(|| fetch_nonce(client, sender.clone()));
 
-	let period = kitchensink_runtime::BlockHashCount::get()
+	let period = culturechain_runtime::BlockHashCount::get()
 		.checked_next_power_of_two()
 		.map(|c| c / 2)
 		.unwrap_or(2) as u64;
 	let tip = 0;
-	let extra: kitchensink_runtime::SignedExtra = (
-		frame_system::CheckNonZeroSender::<kitchensink_runtime::Runtime>::new(),
-		frame_system::CheckSpecVersion::<kitchensink_runtime::Runtime>::new(),
-		frame_system::CheckTxVersion::<kitchensink_runtime::Runtime>::new(),
-		frame_system::CheckGenesis::<kitchensink_runtime::Runtime>::new(),
-		frame_system::CheckEra::<kitchensink_runtime::Runtime>::from(generic::Era::mortal(
+	let extra: culturechain_runtime::SignedExtra = (
+		frame_system::CheckNonZeroSender::<culturechain_runtime::Runtime>::new(),
+		frame_system::CheckSpecVersion::<culturechain_runtime::Runtime>::new(),
+		frame_system::CheckTxVersion::<culturechain_runtime::Runtime>::new(),
+		frame_system::CheckGenesis::<culturechain_runtime::Runtime>::new(),
+		frame_system::CheckEra::<culturechain_runtime::Runtime>::from(generic::Era::mortal(
 			period,
 			best_block.saturated_into(),
 		)),
-		frame_system::CheckNonce::<kitchensink_runtime::Runtime>::from(nonce),
-		frame_system::CheckWeight::<kitchensink_runtime::Runtime>::new(),
-		pallet_asset_conversion_tx_payment::ChargeAssetTxPayment::<kitchensink_runtime::Runtime>::from(
+		frame_system::CheckNonce::<culturechain_runtime::Runtime>::from(nonce),
+		frame_system::CheckWeight::<culturechain_runtime::Runtime>::new(),
+		pallet_asset_conversion_tx_payment::ChargeAssetTxPayment::<culturechain_runtime::Runtime>::from(
 			tip, None,
 		),
 	);
 
-	let raw_payload = kitchensink_runtime::SignedPayload::from_raw(
+	let raw_payload = culturechain_runtime::SignedPayload::from_raw(
 		function.clone(),
 		extra.clone(),
 		(
 			(),
-			kitchensink_runtime::VERSION.spec_version,
-			kitchensink_runtime::VERSION.transaction_version,
+			culturechain_runtime::VERSION.spec_version,
+			culturechain_runtime::VERSION.transaction_version,
 			genesis_hash,
 			best_hash,
 			(),
@@ -124,10 +124,10 @@ pub fn create_extrinsic(
 	);
 	let signature = raw_payload.using_encoded(|e| sender.sign(e));
 
-	kitchensink_runtime::UncheckedExtrinsic::new_signed(
+	culturechain_runtime::UncheckedExtrinsic::new_signed(
 		function,
 		sp_runtime::AccountId32::from(sender.public()).into(),
-		kitchensink_runtime::Signature::Sr25519(signature),
+		culturechain_runtime::Signature::Sr25519(signature),
 		extra,
 	)
 }
@@ -641,7 +641,7 @@ pub fn new_full(config: Configuration, cli: Cli) -> Result<TaskManager, ServiceE
 mod tests {
 	use crate::service::{new_full_base, NewFullBase};
 	use codec::Encode;
-	use kitchensink_runtime::{
+	use culturechain_runtime::{
 		constants::{currency::CENTS, time::SLOT_DURATION},
 		Address, BalancesCall, RuntimeCall, UncheckedExtrinsic,
 	};

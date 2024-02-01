@@ -6,8 +6,8 @@ description = "Generic Substrate node implementation in Rust."
 build = "build.rs"
 edition = "2021"
 license = "GPL-3.0-or-later WITH Classpath-exception-2.0"
-default-run = "substrate-node"
-homepage = "https://substrate.io"
+default-run = "culturechain"
+homepage = "https://moneyhoardersglobal.net/culturechain"
 repository = "https://github.com/paritytech/substrate/"
 publish = false
 
@@ -28,7 +28,7 @@ is-it-maintained-open-issues = { repository = "paritytech/substrate" }
 # The same node binary as the `substrate` (defined in the workspace `Cargo.toml`) binary,
 # but just exposed by this crate here.
 [[bin]]
-name = "substrate-node"
+name = "culturechain"
 path = "bin/main.rs"
 required-features = ["cli"]
 
@@ -96,7 +96,7 @@ pallet-asset-tx-payment = { version = "4.0.0-dev", path = "../../../frame/transa
 pallet-im-online = { version = "4.0.0-dev", default-features = false, path = "../../../frame/im-online" }
 
 # node-specific dependencies
-kitchensink-runtime = { version = "3.0.0-dev", path = "../runtime" }
+culturechain-runtime = { version = "3.0.0-dev", path = "../runtime" }
 node-rpc = { version = "3.0.0-dev", path = "../rpc" }
 node-primitives = { version = "2.0.0", path = "../primitives" }
 node-executor = { version = "3.0.0-dev", path = "../executor" }
@@ -162,7 +162,7 @@ cli = [
 runtime-benchmarks = [
 	"frame-benchmarking-cli/runtime-benchmarks",
 	"frame-system/runtime-benchmarks",
-	"kitchensink-runtime/runtime-benchmarks",
+	"culturechain-runtime/runtime-benchmarks",
 	"pallet-asset-tx-payment/runtime-benchmarks",
 	"pallet-assets/runtime-benchmarks",
 	"pallet-balances/runtime-benchmarks",
@@ -176,7 +176,7 @@ runtime-benchmarks = [
 # in the near future.
 try-runtime = [
 	"frame-system/try-runtime",
-	"kitchensink-runtime/try-runtime",
+	"culturechain-runtime/try-runtime",
 	"pallet-asset-conversion-tx-payment/try-runtime",
 	"pallet-asset-tx-payment/try-runtime",
 	"pallet-assets/try-runtime",

@@ -1,0 +1,279 @@
+"name": "CultureChain",
+  "id": "culturechain_mainnet",
+  "chainType": "Live",
+  "bootNodes": [],
+  "telemetryEndpoints": null,
+  "protocolId": "mhg",
+  "properties": {
+    "ss58Format": 42,
+    "tokenDecimals": 18,
+    "tokenSymbol": "MHG"
+  },
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+"babe": {
+        "authorities": [],
+        "epochConfig": {
+          "c": [
+            1,
+            4
+          ],
+          "allowed_slots": "PrimaryAndSecondaryPlainSlots"
+        }
+      },
+      "indices": {
+        "indices": []
+      },
+      "balances": {
+        "balances": [
+          [
+            "5GrwvaEF5zXb26Fz9rcQpDWS57CtERHpNehXCPcNoHGKutQY",
+            1000000000000000000000
+          ],
+          [
+            "5FHneW46xGXgs5mUiveU4sbTyGBzmstUspZC92UhjJM694ty",
+            1000000000000000000000
+          ],
+          [
+            "5H1c8t5KDCAKwrszxEHC44BSHjuqAoqQVFPxpQ9gS7bmemLq",
+            1000000000000000000000
+          ],
+          [
+            "5CySPaySyP2DNR8p1Ai9c9tQvJynD8crKkMXRd8b3YmMszn7",
+            1000000000000000000000
+          ],
+          [
+            "5FExdjVsWf7fku1ZAAR7Co7ryi3RrNnKe3btD1BHxtTZnRHv",
+            1000000000000000000000
+          ],
+          [
+            "5CiPPseXPECbkjWCa6MnjNokrgYjMqmKndv2rSnekmSK2DjL",
+            1000000000000000000000
+          ],
+          [
+            "5GNJqTPyNqANBkUVMN1LPPrxXnFouWXoe2wNSmmEoLctxiZY",
+            1000000000000000000000
+          ],
+          [
+            "5HpG9w8EBLe5XCrbczpwq5TSXvedjrBGCwqxK1iQ7qUsSWFc",
+            1000000000000000000000
+          ],
+          [
+            "5Ck5SLSHYac6WFt5UZRSsdJjwmpSZq85fd5TRNAdZQVzEAPT",
+            1000000000000000000000
+          ],
+          [
+            "5HKPmK9GYtE1PSLsS1qiYU9xQ9Si1NcEhdeCq9sw5bqu4ns8",
+            1000000000000000000000
+          ],
+          [
+            "5FCfAonRZgTFrTd9HREEyeJjDpT397KMzizE6T3DvebLFE7n",
+            1000000000000000000000
+          ],
+          [
+            "5CRmqmsiNFExV6VbdmPJViVxrWmkaXXvBrSX8oqBT8R9vmWk",
+            1000000000000000000000
+          ]
+        ]
+      },
+      "transactionPayment": {
+        "multiplier": "1000000000000000000"
+      },
+      "staking": {
+        "validatorCount": 2,
+        "minimumValidatorCount": 2,
+        "invulnerables": [
+          "5GNJqTPyNqANBkUVMN1LPPrxXnFouWXoe2wNSmmEoLctxiZY",
+          "5HpG9w8EBLe5XCrbczpwq5TSXvedjrBGCwqxK1iQ7qUsSWFc",
+          "5H1c8t5KDCAKwrszxEHC44BSHjuqAoqQVFPxpQ9gS7bmemLq"
+        ],
+        "forceEra": "NotForcing",
+        "slashRewardFraction": 100000000,
+        "canceledPayout": 0,
+        "stakers": [
+          [
+            "5GNJqTPyNqANBkUVMN1LPPrxXnFouWXoe2wNSmmEoLctxiZY",
+            "5GNJqTPyNqANBkUVMN1LPPrxXnFouWXoe2wNSmmEoLctxiZY",
+            1000000000000000000,
+            "Validator"
+          ],
+          [
+            "5HpG9w8EBLe5XCrbczpwq5TSXvedjrBGCwqxK1iQ7qUsSWFc",
+            "5HpG9w8EBLe5XCrbczpwq5TSXvedjrBGCwqxK1iQ7qUsSWFc",
+            1000000000000000000,
+            "Validator"
+          ],
+          [
+            "5FP1XqdYWtSKAgw2UMbhBZpwrJ1a4bStnZXQE69kqGMAbznv",
+            "5FP1XqdYWtSKAgw2UMbhBZpwrJ1a4bStnZXQE69kqGMAbznv",
+            1000000000000000000,
+            "Validator"
+          ],
+          [
+            "5FZfuYYzpHbUoM4Ar9T3VDAY85q4mB5mkLRybyUk3LckNKRe",
+            "5FZfuYYzpHbUoM4Ar9T3VDAY85q4mB5mkLRybyUk3LckNKRe",
+            1000000000000000000,
+            "Validator"
+          ]
+        ],
+        "minNominatorBond": 0,
+        "minValidatorBond": 0,
+        "maxValidatorCount": null,
+        "maxNominatorCount": null
+      },
+      "session": {
+        "keys": [
+          [
+            "5GNJqTPyNqANBkUVMN1LPPrxXnFouWXoe2wNSmmEoLctxiZY",
+            "5GNJqTPyNqANBkUVMN1LPPrxXnFouWXoe2wNSmmEoLctxiZY",
+            {
+              "grandpa": "5FA9nQDVg267DEd8m1ZypXLBnvN7SFxYwV7ndqSYGiN9TTpu",
+              "babe": "5GrwvaEF5zXb26Fz9rcQpDWS57CtERHpNehXCPcNoHGKutQY",
+              "im_online": "5GrwvaEF5zXb26Fz9rcQpDWS57CtERHpNehXCPcNoHGKutQY",
+              "authority_discovery": "5GrwvaEF5zXb26Fz9rcQpDWS57CtERHpNehXCPcNoHGKutQY"
+            }
+          ],
+          [
+            "5HpG9w8EBLe5XCrbczpwq5TSXvedjrBGCwqxK1iQ7qUsSWFc",
+            "5HpG9w8EBLe5XCrbczpwq5TSXvedjrBGCwqxK1iQ7qUsSWFc",
+            {
+              "grandpa": "5GoNkf6WdbxCFnPdAnYYQyCjAKPJgLNxXwPjwTh6DGg6gN3E",
+              "babe": "5FHneW46xGXgs5mUiveU4sbTyGBzmstUspZC92UhjJM694ty",
+              "im_online": "5FHneW46xGXgs5mUiveU4sbTyGBzmstUspZC92UhjJM694ty",
+              "authority_discovery": "5FHneW46xGXgs5mUiveU4sbTyGBzmstUspZC92UhjJM694ty"
+            }
+          ]
+        ]
+      },
+      "democracy": {},
+      "council": {
+        "members": []
+      },
+      "technicalCommittee": {
+        "members": [
+          "5GrwvaEF5zXb26Fz9rcQpDWS57CtERHpNehXCPcNoHGKutQY",
+          "5FHneW46xGXgs5mUiveU4sbTyGBzmstUspZC92UhjJM694ty",
+          "5H1c8t5KDCAKwrszxEHC44BSHjuqAoqQVFPxpQ9gS7bmemLq",
+          "5DAAnrj7VHTznn2AWBemMuyBwZWs6FNFjdyVXUeYum3PTXFy",
+          "5HGjWAeFDfFCWPsjFQdVV2Msvz2XtMktvgocEZcCj68kUMaw",
+          "5CiPPseXPECbkjWCa6MnjNokrgYjMqmKndv2rSnekmSK2DjL"
+        ]
+      },
+      "elections": {
+        "members": [
+          [
+            "5GrwvaEF5zXb26Fz9rcQpDWS57CtERHpNehXCPcNoHGKutQY",
+            1000000000000000000
+          ],
+          [
+            "5FHneW46xGXgs5mUiveU4sbTyGBzmstUspZC92UhjJM694ty",
+            1000000000000000000
+          ],
+          [
+            "5H1c8t5KDCAKwrszxEHC44BSHjuqAoqQVFPxpQ9gS7bmemLq",
+            1000000000000000000
+          ],
+          [
+            "5DAAnrj7VHTznn2AWBemMuyBwZWs6FNFjdyVXUeYum3PTXFy",
+            1000000000000000000
+          ],
+          [
+            "5HGjWAeFDfFCWPsjFQdVV2Msvz2XtMktvgocEZcCj68kUMaw",
+            1000000000000000000
+          ],
+          [
+            "5CiPPseXPECbkjWCa6MnjNokrgYjMqmKndv2rSnekmSK2DjL",
+            1000000000000000000
+          ]
+        ]
+      },
+      "technicalMembership": {
+        "members": []
+      },
+      "grandpa": {
+        "authorities": []
+      },
+      "treasury": {},
+      "sudo": {
+        "key": "5H1c8t5KDCAKwrszxEHC44BSHjuqAoqQVFPxpQ9gS7bmemLq"
+      },
+      "imOnline": {
+        "keys": []
+      },
+      "authorityDiscovery": {
+        "keys": []
+      },
+      "society": {
+        "pot": 0
+      },
+      "vesting": {
+        "vesting": []
+      },
+      "glutton": {
+        "compute": "0",
+        "storage": "0",
+        "trashDataCount": 0
+      },
+      "assets": {
+        "assets": [
+          [
+            9,
+            "5H1c8t5KDCAKwrszxEHC44BSHjuqAoqQVFPxpQ9gS7bmemLq",
+            true,
+            1
+          ]
+        ],
+        "metadata": [],
+        "accounts": []
+      },
+      "poolAssets": {
+        "assets": [],
+        "metadata": [],
+        "accounts": []
+      },
+      "transactionStorage": {
+        "byteFee": 10,
+        "entryFee": 1000,
+        "storagePeriod": 100800
+      },
+      "allianceMotion": {
+        "members": []
+      },
+      "alliance": {
+        "fellows": [],
+        "allies": []
+      },
+      "nominationPools": {
+        "minJoinBond": 100000000000000,
+        "minCreateBond": 1000000000000000,
+        "maxPools": 16,
+        "maxMembersPerPool": 32,
+        "maxMembers": 512,
+        "globalMaxCommission": null
+      },
+      "txPause": {
+        "paused": []
+      },
+      "safeMode": {
+        "enteredUntil": null
+      }
+    }
+  }
+}
